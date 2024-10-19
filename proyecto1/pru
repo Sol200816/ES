@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesnot.css">
+    
+</head>
+<body>
+   
+    <header class="header">
+        <div class="logo">Logo Here </div>
+        <nav class="main-nav">
+            <ul class-"nav-list">
+                <li><a href="">Home</a></li>
+                <li><a href="">Work</a></li>
+                <li><a href="">Contact</a></1i>
+            </ul>
+        </nav>
+    </header>
+</body>
+    
+    <main>
+        
+        <section class="preview" >
+        <div class="text">
+        <h1>Hi, my name is Hulk!
+        I work in New York</h1>
+        <p>I'm defending the city and I love SMASH!</p>
+        <a href="">hi@yourname. com </a>
+        </div>
+        «div class="img">
+        <img src="hulk.png" alt="hulk">
+        </div>
+        </ section>
+        
+
+
+    </main>
+    <fooder></fooder>
+    
+</body>
+</html>
