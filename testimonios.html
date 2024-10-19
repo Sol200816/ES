@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonios</title>
+    <style>
+        .testimonios { margin-top: 20px; }
+        .mensaje { padding: 10px; border: 1px solid #a8a4a5; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Deja tu testimonio</h1>
+
+    <form id="formTestimonio">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required><br><br>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" required></textarea><br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <h2>Testimonios:</h2>
+    <div class="testimonios" id="testimonios">
+        <!-- Aquí aparecerán los testimonios -->
+    </div>
+
+    <script>
+        const form = document.getElementById('formTestimonio');
+        const testimoniosDiv = document.getElementById('testimonios');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita que se recargue la página
+
+            const nombre = document.getElementById('nombre').value;
+            const mensaje = document.getElementById('mensaje').value;
+
+            if (nombre && mensaje) {
+                // Crear el nuevo testimonio
+                const nuevoTestimonio = document.createElement('div');
+                nuevoTestimonio.classList.add('mensaje');
+                nuevoTestimonio.innerHTML = `<strong>${nombre}:</strong> <p>${mensaje}</p>`;
+                
+                // Agregarlo al div de testimonios
+                testimoniosDiv.appendChild(nuevoTestimonio);
+
+                // Limpiar el formulario
+                form.reset();
+            }
+        });
+    </script>
+</body>
+</html>
